@@ -2,3 +2,4 @@ node_modules
 bundle*
 dev.sqlite3
 coverage
+private

@@ -10,6 +10,7 @@ function App () {
     <div className='app'>
       <Route path='/' component={ExampleComponent} />
       {/* <Route path='/' component={ErrorMessage} /> */}
+      {/* <Route path='/' component={} /> */}
     </div>
   )
 }
