@@ -30,13 +30,22 @@ async function quickStart () {
   return translation
 }
 
+// router.get('/', (req, res) => {
+//   quickStart()
+//     .then(translation => {
+//       res.send(translation)
+//       return null
+//     })
+//     .catch(err => {
+//       console.error('ERROR:', err)
+//     })
+// })
+
 router.get('/', (req, res) => {
-  quickStart()
+  translate.translate('hello', 'ko')
     .then(translation => {
       res.send(translation)
       return null
     })
-    .catch(err => {
-      console.error('ERROR:', err)
-    })
+    .catch(err => console.error(err))
 })

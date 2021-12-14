@@ -2,8 +2,12 @@
 const path = require('path')
 const express = require('express')
 
+// setting up the dotenv
+require('dotenv').config({ path: path.join(__dirname, '.env') })
+
 // internal requires
 const exampleRoute = require('./routes/exampleRoute')
+const translateRoute = require('./routes/translateRoute')
 
 const server = express()
 
@@ -12,6 +16,7 @@ server.use(express.static(path.join(__dirname, 'public')))
 
 // tell server about our routes
 server.use('/api/v1/exampleRoute', exampleRoute)
+server.use('translate', translateRoute)
 
 // For the client side BrowserRouter - because there is no '#' to distinguish
 // between client and server side routes, this sends back the index.html
