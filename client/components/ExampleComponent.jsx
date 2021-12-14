@@ -20,6 +20,7 @@ function ExampleComponent () {
     <div className='example-component'>
       <h1>Example Component</h1>
       {example}
+      <input type='text' />
     </div>
   )
 }
