@@ -20,9 +20,10 @@ function ExampleComponent () {
   // Redux dispatch to dispatch actions
   const dispatch = useDispatch()
 
-  // useEffect(() => {
-  //   dispatch(exampleAction())
-  // }, [])
+  useEffect(() => {
+    // dispatch(exampleAction())
+    setInput(translation)
+  }, [translation])
 
   function handleTranslate () {
     dispatch(exampleAction(input))
@@ -36,7 +37,6 @@ function ExampleComponent () {
   return (
     <div className='example-component'>
       <h1>Example Component</h1>
-      {translation}
       <input type='text' onChange={(e) => handleChange(e)} value={input} />
       <Button onClick={handleTranslate} variant="outline-primary">Translate!</Button>
     </div>
