@@ -25,9 +25,24 @@ function ExampleComponent () {
     setInput(translation)
   }, [translation])
 
+  // code to make user's keyboard enter button submit the form
+  useEffect(() => {
+    const listener = event => {
+      if (event.code === 'Enter') {
+        console.log('enter button pressed and input: ', input)
+        console.log('input: ', input)
+        dispatch(exampleAction(input))
+        event.preventDefault()
+      }
+    }
+    document.addEventListener('keydown', listener)
+    return () => {
+      document.removeEventListener('keydown', listener)
+    }
+  }, [input])
+
   function handleTranslate () {
     dispatch(exampleAction(input))
-    console.log('dispatching input: ', input)
   }
 
   function handleChange (event) {
