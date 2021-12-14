@@ -9,13 +9,15 @@ const { Translate } = require('@google-cloud/translate').v2
 
 // Instantiates a client
 const translate = new Translate()
-console.log('translate client: ', translate)
 
-router.get('/', (req, res) => {
-  translate.translate('hello', 'ko')
+router.post('/', (req, res) => {
+  const input = req.body.input
+
+  translate.translate(input, 'ko')
     .then(translation => {
-      res.send(translation)
+      console.log('TCL: translation', translation)
+      res.send({ translation })
       return null
     })
-    .catch(err => console.error(err))
+    .catch(console.log('google api not working...'))
 })

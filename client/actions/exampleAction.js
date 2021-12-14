@@ -20,10 +20,10 @@ export function exampleActionSucess (example) {
   }
 }
 
-export function exampleAction () {
+export function exampleAction (input) {
   return (dispatch) => {
     dispatch(exampleActionPending())
-    return exampleAPI()
+    return exampleAPI(input)
       .then((example) => {
         dispatch(exampleActionSucess(example))
         return null

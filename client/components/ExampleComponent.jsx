@@ -25,7 +25,8 @@ function ExampleComponent () {
   // }, [])
 
   function handleTranslate () {
-    dispatch(exampleAction())
+    dispatch(exampleAction(input))
+    console.log('dispatching input: ', input)
   }
 
   function handleChange (event) {
@@ -36,7 +37,7 @@ function ExampleComponent () {
     <div className='example-component'>
       <h1>Example Component</h1>
       {translation}
-      <input type='text' onChange={(e) => handleChange(e)} />
+      <input type='text' onChange={(e) => handleChange(e)} value={input} />
       <Button onClick={handleTranslate} variant="outline-primary">Translate!</Button>
     </div>
   )
