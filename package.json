@@ -5,9 +5,9 @@
   "main": "server/index.js",
   "scripts": {
     "start": "node server",
-    "build": "npm run webpack -- --mode production",
+    "build": "run-p build:client ",
     "dev": "run-p client server",
-    "client": "webpack --watch --config client/webpack.config.js",
+    "client": "npm run webpack -- --mode production",
     "server": "nodemon server",
     "knex": "knex --knexfile server/db/knexfile.js",
     "test": "jest --watchAll --verbose",
