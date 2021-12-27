@@ -5,6 +5,7 @@
   "main": "server/index.js",
   "scripts": {
     "start": "node server",
+    "build": "webpack",
     "dev": "run-p client server",
     "client": "webpack --watch --config client/webpack.config.js",
     "server": "nodemon server",
