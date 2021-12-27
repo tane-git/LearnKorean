@@ -13,6 +13,9 @@
     "test": "jest --watchAll --verbose",
     "lint": "eslint . --ext .js,.jsx"
   },
+  "engines": {
+    "node": "14.x"
+  },
   "author": "EDA",
   "license": "ISC",
   "babel": {
