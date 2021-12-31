@@ -14,6 +14,7 @@ function setSecrets () {
     (err) => {
       // if there is an error, log it
       if (err) {
+        console.log('setting secrets!')
         // create a json file which contains the google secrets
         fs.writeFile(
           'server/serverSecrets.json',
