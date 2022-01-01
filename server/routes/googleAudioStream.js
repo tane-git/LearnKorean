@@ -1,4 +1,8 @@
+const path = require('path')
+
 const recorder = require('node-record-lpcm16')
+
+require('dotenv').config({ path: path.join(__dirname, '../.env') })
 
 // Imports the Google Cloud client library
 const speech = require('@google-cloud/speech')
