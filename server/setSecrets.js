@@ -1,5 +1,4 @@
 // this file sets up a file that contains the google secrets requried to use the translation api
-// TODO: bug coming up saying this module cannot be found??? how do I export this file for it to be used by server
 
 // set variable GOOGLE_SECRETS to be equal to the environment variable GOOGLE_SECRETS
 const GOOGLE_SECRETS = process.env.GOOGLE_SECRETS
