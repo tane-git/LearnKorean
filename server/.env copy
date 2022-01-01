@@ -1,0 +1,2 @@
+GOOGLE_APPLICATION_CREDENTIALS=server/serverSecrets.json
+GOOGLE_SECRETS="get a google services account and add file here"
