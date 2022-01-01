@@ -7,6 +7,8 @@ require('dotenv').config({ path: path.join(__dirname, '.env') })
 
 // internal requires
 const exampleRoute = require('./routes/exampleRoute')
+// const { setSecrets } = require('./setSecrets.js')
+const setSecrets = require('./setSecrets.js')
 
 const server = express()
 
@@ -22,5 +24,21 @@ server.use('/api/v1/exampleRoute', exampleRoute)
 server.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, './public/index.html'))
 })
+
+// call serverSects.js to set up the google secrets
+setSecrets()
+
+// coding in place to set secrets
+// const GOOGLE_SECRETS = process.env.GOOGLE_SECRETS
+// const fs = require('fs')
+// fs.writeFile(
+//   'server/serverSecrets.json',
+//   GOOGLE_SECRETS,
+//   (err) => {
+//     if (err) {
+//       console.error(err)
+//     }
+//   }
+// )
 
 module.exports = server

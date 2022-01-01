@@ -3,3 +3,5 @@ bundle*
 dev.sqlite3
 coverage
 private
+.env
+serverSecrets.json
