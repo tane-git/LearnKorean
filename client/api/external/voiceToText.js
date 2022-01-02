@@ -9,6 +9,7 @@ require('dotenv').config({ path: path.join(__dirname, '../.env') })
 const speech = require('@google-cloud/speech')
 
 export default function voiceToText () {
+  console.log('voiceToText called')
   // Test set up: User clicks a button and this function is called.
   // This function does everything required to get audio streaming to google speech recognition api.
 

@@ -4,6 +4,7 @@ import { Route } from 'react-router-dom'
 
 // import Components
 import ExampleComponent from './ExampleComponent.jsx'
+import VoiceToText from './VoiceToText.jsx'
 
 function App () {
   return (
@@ -11,6 +12,7 @@ function App () {
       <Route path='/' component={ExampleComponent} />
       {/* <Route path='/' component={ErrorMessage} /> */}
       {/* <Route path='/' component={} /> */}
+      <Route path='/' component={VoiceToText} />
     </div>
   )
 }
