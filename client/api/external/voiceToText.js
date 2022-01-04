@@ -1,4 +1,5 @@
 // Note: Attempting to put the google speech translate on the front end... Not sure if it will work. For example, it uses requires which I think might be a Node.js thing and browser run JS might need to use imports?
+// Note: I think there are errors coming up crashing this...
 
 // Requires
 const path = require('path')
